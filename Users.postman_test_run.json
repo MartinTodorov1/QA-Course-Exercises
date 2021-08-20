@@ -1,0 +1,322 @@
+{
+	"id": "9cc7c45b-bee0-40b9-afb3-e6c18d5a57cd",
+	"name": "Users",
+	"timestamp": "2021-08-20T11:07:55.416Z",
+	"collection_id": "14766931-d8c1b2b5-5bd8-4b58-ae48-02a3fd97e928",
+	"folder_id": 0,
+	"environment_id": "61fd56fe-9a78-47aa-84bb-874763b5bfb0",
+	"totalPass": 9,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "af81834f-47bb-4ba3-a851-13bdd3e5a99a",
+			"name": "Registration",
+			"url": "http://161.35.202.130:3100/users",
+			"time": 91,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				91
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "23825fb4-0311-4a22-8a5b-896e8b6492c7",
+			"name": "Get users",
+			"url": "http://161.35.202.130:3100/users?q=alex",
+			"time": 88,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"\"Body does not have \"Unauthorized\"": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"\"Body does not have \"Unauthorized\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				88
+			],
+			"allTests": [
+				{
+					"\"Body does not have \"Unauthorized\"": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ffb294f9-20ac-489e-8df2-3f95df5332f9",
+			"name": "User login",
+			"url": "http://161.35.202.130:3100/users/login",
+			"time": 326,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Set token dynamically": true
+			},
+			"testPassFailCounts": {
+				"Set token dynamically": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				326
+			],
+			"allTests": [
+				{
+					"Set token dynamically": true
+				}
+			]
+		},
+		{
+			"id": "6fdeccd5-0467-4c2f-baa9-7cb7dfb87ceb",
+			"name": "Modify user",
+			"url": "http://161.35.202.130:3100/users",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"\"Status code is \"Created\"": false,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"\"Status code is \"Created\"": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"\"Status code is \"Created\"": false,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "1677aa94-362c-41fc-a4f1-9e2fd2e19d4c",
+			"name": "User logout",
+			"url": "http://161.35.202.130:3100/users/logout",
+			"time": 120,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				120
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "aa0caa5f-2da2-4e84-ad4b-c30a00269803",
+			"name": "Get user from users",
+			"url": "http://161.35.202.130:3100/users/65",
+			"time": 84,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				84
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ff10f8d8-2143-4820-8c2c-7e932db1ebd4",
+			"name": "Delete user",
+			"url": "http://161.35.202.130:3100/users/65",
+			"time": 76,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				76
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "f3493cee-fe98-45ee-9973-52a67af04505",
+			"name": "Follow user",
+			"url": "http://161.35.202.130:3100/users/66",
+			"time": 101,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				101
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "ff0964bb-90fa-4b86-9a2e-7f67c3112eab",
+			"name": "Ban user",
+			"url": "http://161.35.202.130:3100/users%E2%80%8B/1169/banstatus",
+			"time": 41,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				41
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "880e0898-c20d-48a4-ac37-a4c17c7da789",
+			"name": "Get user's posts",
+			"url": "http://161.35.202.130:3100/users/1169/posts?postStatus=public&take=1&skip=1",
+			"time": 101,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				101
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1197,
+	"collection": {
+		"requests": [
+			{
+				"id": "af81834f-47bb-4ba3-a851-13bdd3e5a99a",
+				"method": "POST"
+			},
+			{
+				"id": "23825fb4-0311-4a22-8a5b-896e8b6492c7",
+				"method": "GET"
+			},
+			{
+				"id": "ffb294f9-20ac-489e-8df2-3f95df5332f9",
+				"method": "POST"
+			},
+			{
+				"id": "6fdeccd5-0467-4c2f-baa9-7cb7dfb87ceb",
+				"method": "PUT"
+			},
+			{
+				"id": "1677aa94-362c-41fc-a4f1-9e2fd2e19d4c",
+				"method": "DELETE"
+			},
+			{
+				"id": "aa0caa5f-2da2-4e84-ad4b-c30a00269803",
+				"method": "GET"
+			},
+			{
+				"id": "ff10f8d8-2143-4820-8c2c-7e932db1ebd4",
+				"method": "DELETE"
+			},
+			{
+				"id": "f3493cee-fe98-45ee-9973-52a67af04505",
+				"method": "PATCH"
+			},
+			{
+				"id": "ff0964bb-90fa-4b86-9a2e-7f67c3112eab",
+				"method": "PUT"
+			},
+			{
+				"id": "880e0898-c20d-48a4-ac37-a4c17c7da789",
+				"method": "GET"
+			}
+		]
+	}
+}

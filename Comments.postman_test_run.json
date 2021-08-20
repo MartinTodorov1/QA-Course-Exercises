@@ -1,0 +1,139 @@
+{
+	"id": "2022ff5a-de75-48cb-9eaf-05d37426ddc7",
+	"name": "Comments",
+	"timestamp": "2021-08-20T11:07:16.585Z",
+	"collection_id": "14766931-2c839e8b-f296-4e94-96d9-24b6356aefda",
+	"folder_id": 0,
+	"environment_id": "61fd56fe-9a78-47aa-84bb-874763b5bfb0",
+	"totalPass": 4,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "f2b0bc62-472f-4662-8d9c-058dd3b2d6ab",
+			"name": "Create comment",
+			"url": "http://161.35.202.130:3100/posts/3750/comment",
+			"time": 155,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"\"Body does not have \"Not found\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"\"Body does not have \"Not found\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				155
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"\"Body does not have \"Not found\"": true
+				}
+			]
+		},
+		{
+			"id": "8e3d09dd-5912-4099-91c6-b78c7870e44f",
+			"name": "User login",
+			"url": "http://161.35.202.130:3100/users/login",
+			"time": 331,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Set token dynamically": true
+			},
+			"testPassFailCounts": {
+				"Set token dynamically": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				331
+			],
+			"allTests": [
+				{
+					"Set token dynamically": true
+				}
+			]
+		},
+		{
+			"id": "c7b61291-4733-46ce-a64a-422e879b69dc",
+			"name": "Get comment",
+			"url": "http://161.35.202.130:3100/posts/3750/comments?commentID=773",
+			"time": 58,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				58
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e4a8bb6b-85cc-4fd0-964d-e13117ccf62a",
+			"name": "Delete comment",
+			"url": "http://161.35.202.130:3100/posts/3750/comments/773",
+			"time": 73,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				73
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 617,
+	"collection": {
+		"requests": [
+			{
+				"id": "f2b0bc62-472f-4662-8d9c-058dd3b2d6ab",
+				"method": "POST"
+			},
+			{
+				"id": "8e3d09dd-5912-4099-91c6-b78c7870e44f",
+				"method": "POST"
+			},
+			{
+				"id": "c7b61291-4733-46ce-a64a-422e879b69dc",
+				"method": "GET"
+			},
+			{
+				"id": "e4a8bb6b-85cc-4fd0-964d-e13117ccf62a",
+				"method": "DELETE"
+			}
+		]
+	}
+}

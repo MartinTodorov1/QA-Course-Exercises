@@ -1,0 +1,223 @@
+{
+	"id": "913f77c0-e14d-4e8c-a643-fbf977524140",
+	"name": "Posts",
+	"timestamp": "2021-08-20T11:07:39.021Z",
+	"collection_id": "14766931-b5a845e9-8c28-48af-b3f9-a8535dc443e5",
+	"folder_id": 0,
+	"environment_id": "61fd56fe-9a78-47aa-84bb-874763b5bfb0",
+	"totalPass": 6,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5d85f201-48ff-4029-b037-22685a094ce8",
+			"name": "Get posts feed",
+			"url": "http://161.35.202.130:3100/posts/feed?type&take=3&skip=3",
+			"time": 157,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ef35463a-d668-40f6-a9d3-4982cfb9c5c6",
+			"name": "User login",
+			"url": "http://161.35.202.130:3100/users/login",
+			"time": 328,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Set token dynamically": true
+			},
+			"testPassFailCounts": {
+				"Set token dynamically": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				328
+			],
+			"allTests": [
+				{
+					"Set token dynamically": true
+				}
+			]
+		},
+		{
+			"id": "0958b770-bdb1-4aba-8802-e0e6606133a0",
+			"name": "Create post",
+			"url": "http://161.35.202.130:3100/posts",
+			"time": 78,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Successful POST request": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				78
+			],
+			"allTests": [
+				{
+					"Successful POST request": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "935f7132-4c62-486f-992a-e58c1e99af5d",
+			"name": "Get all public posts",
+			"url": "http://161.35.202.130:3100/posts/public?take=3&skip=3",
+			"time": 57,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"\"Body has \"id: 3778\"": true
+			},
+			"testPassFailCounts": {
+				"\"Body has \"id: 3778\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				57
+			],
+			"allTests": [
+				{
+					"\"Body has \"id: 3778\"": true
+				}
+			]
+		},
+		{
+			"id": "337dbbc8-e6ff-4571-919f-2c44a340dbf1",
+			"name": "Modify post",
+			"url": "http://161.35.202.130:3100/posts/3754",
+			"time": 74,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				74
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f96cdba6-be50-45ce-aeee-724678cb96d8",
+			"name": "Delete post",
+			"url": "http://161.35.202.130:3100/posts/3754",
+			"time": 67,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				67
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e7018617-0b5c-403a-a088-9f93434c3801",
+			"name": "Like a post",
+			"url": "http://161.35.202.130:3100/posts/3754",
+			"time": 134,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				134
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 895,
+	"collection": {
+		"requests": [
+			{
+				"id": "5d85f201-48ff-4029-b037-22685a094ce8",
+				"method": "GET"
+			},
+			{
+				"id": "ef35463a-d668-40f6-a9d3-4982cfb9c5c6",
+				"method": "POST"
+			},
+			{
+				"id": "0958b770-bdb1-4aba-8802-e0e6606133a0",
+				"method": "POST"
+			},
+			{
+				"id": "935f7132-4c62-486f-992a-e58c1e99af5d",
+				"method": "GET"
+			},
+			{
+				"id": "337dbbc8-e6ff-4571-919f-2c44a340dbf1",
+				"method": "PUT"
+			},
+			{
+				"id": "f96cdba6-be50-45ce-aeee-724678cb96d8",
+				"method": "DELETE"
+			},
+			{
+				"id": "e7018617-0b5c-403a-a088-9f93434c3801",
+				"method": "PATCH"
+			}
+		]
+	}
+}
